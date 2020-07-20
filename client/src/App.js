@@ -9,8 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <h1>KUBERNETES!</h1>
-        <Link to="/">Home</Link>
-        <Link to="/otherpage">Other Page</Link>
+        <Link to="/">Home</Link> - <Link to="/otherpage">Other Page</Link>
         <div>
           <Route exact path="/" component={Fib} />
           <Route path="/otherpage" component={OtherPage} />
