@@ -7,6 +7,6 @@ docker push metafield/multi-server
 docker push metafield/multi-worker
 
 kubectl apply -f k8s
-kubectl rollout restart deployment deployments/server-deployment
-kubectl rollout restart deployment deployments/client-deployment
-kubectl rollout restart deployment deployments/worker-deployment
+kubectl rollout restart deployment/server-deployment
+kubectl rollout restart deployment/client-deployment
+kubectl rollout restart deployment/worker-deployment
