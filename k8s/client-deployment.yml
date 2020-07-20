@@ -15,5 +15,6 @@ spec:
       containers:
         - name: client
           image: metafield/multi-client
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
