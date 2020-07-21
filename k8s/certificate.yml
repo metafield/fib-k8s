@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: rainbase-dev-tls
+spec:
+  secretName: rainbase-dev
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: rainbase.dev
+  dnsNames:
+    - rainbase.dev
+    - www.rainbase.dev
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - rainbase.dev
+          - www.rainbase.dev
